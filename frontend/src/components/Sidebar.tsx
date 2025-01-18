@@ -5,8 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Accordion } from "react-bootstrap";
 import './Sidebar.css'
-
-
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 
 
@@ -53,6 +52,22 @@ const DropdownOptions : React.FC<DropdownProps> = ({link} : DropdownProps) => {
     );
 }
 
+
+
+
+
+const ProfileSection : React.FC = () => {
+
+
+    return (
+        <div className="profile">
+            <div className="segment">
+                <i className="bi bi-person"></i>
+                <p>Profile</p>
+            </div>
+        </div>
+    )
+}
 
 const JlptDropdowns : React.FC = () => {
 
@@ -137,7 +152,7 @@ const Sidebar : React.FC = () => {
     return (
             <div className="sidebar">
                 <JlptDropdowns />
-
+                <ProfileSection />
             </div>
     )
 }
